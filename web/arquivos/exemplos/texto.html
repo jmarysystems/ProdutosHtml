@@ -1,0 +1,125 @@
+<html>
+    
+    <head>
+        
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            
+            h1{ font:bold 150% verdana,arial,helvetica; }  
+            
+            p{ line-height:1.1em; }
+            
+            h2{ font:bold 120% verdana,arial,helvetica; color:#8080FF; }
+            
+            PRE {
+                font-family: 'courier new',courier,serif;
+                font-size: 80%;
+                font-weight: bold;
+                background: #EEEEFF;
+            }
+            
+            .espaco_a_esquerda_20_px{                 
+                padding-left:  0px;
+                padding-right: 0px;
+                padding-top:   0px;
+                padding-bottom:0px;                
+                margin-left:   20px;
+                margin-right:  0px;
+                margin-top:    0px;
+                margin-bottom: 0px;
+            }
+            
+            .espaco_a_esquerda_40_px{                 
+                padding-left:  0px;
+                padding-right: 0px;
+                padding-top:   0px;
+                padding-bottom:0px;                
+                margin-left:   40px;
+                margin-right:  0px;
+                margin-top:    0px;
+                margin-bottom: 0px;
+            }
+        </style>        
+    </head>
+    
+    <body 
+        style="
+            font:normal 140% verdana,arial,helvetica;
+            width: 100%; height: 100%; padding: 0; margin: 0;
+        " 
+    >
+        <div>
+            
+            <h1 align="center">Testando aplicações web </h1>
+            
+            <!--  -->
+            <div class="espaco_a_esquerda_20_px">
+            <!--  -->    
+                <p>É bem mais complicado testar interfaces web do que classes Java.</p>
+            
+                <p>Aplicações WEB não permitem verificar facilmente se o 
+                    conteúdo presente é o esperado. Informações importantes 
+                    que precisam ser avaliadas encontram-se misturadas com tags HTML.</p>
+            
+                <p>O <em>layout </em>das aplicações web mudam com frequência.</p>
+            
+                <ul>
+                    <li> 
+                        <p>Resubmissão de um formulário (por exemplo, o usuário 
+                            submete um pedido de compra, enquanto o servidor ainda está processando 
+                            a primeira submissão)</p>
+                    </li>
+                    <li> 
+                        <p> Implicações do uso do botão "Voltar" (muitas 
+                            vezes, objetos perdem seus valores quando mudam de escopo)</p>
+                    </li>
+                </ul>
+            
+                <p>&nbsp;</p>
+
+
+                <h2>ServletUnit</h2>
+                    <!--  -->
+                    <div class="espaco_a_esquerda_20_px">
+                    <!--  --> 
+                        
+                        <p>ServletUnit 
+                            também permite testar métodos individuais.&nbsp;</p>
+                        <p>ServletUnit simula 
+                            servlet container que prover todas as funcionalidades de servlet container 
+                            real. Os seguintes passos são necessários para testar um servlet: 
+                        </p>
+                        
+                        <ol class="espaco_a_esquerda_40_px">
+                            
+                            <li class="espaco_zero_px_todos"> 
+                                
+                                <p>Criar um instância da classe ServletRunner. Essa é a classe 
+                                    que simula o container e permite o acesso a objetos do servlet que estejam 
+                                    rodando.</p>
+                            </li> 
+                            
+                            <li> 
+                                <p>Registrar o(s) servlet(s) que serão testados no contexto simulado 
+                                    pelo ServletRunner.</p>
+                            </li>
+                        </ol>
+                    <!--  -->
+                    </div>
+                    <!--  -->   
+                    
+                    <!--  -->
+                    <pre class="espaco_a_esquerda_20_px">
+                        public class SimpleServlet extends HttpServlet { <br>    public void doGet(HttpServletRequest request, HttpServletResponse response)<br>           throws ServletException, IOException {<br>       String user = getUser(request, response);<br>       response.getWriter().print("User that call this servlet is " + user);<br>    }<br><br>    public void doPost(HttpServletRequest request, HttpServletResponse response)<br>            throws ServletException, IOException {<br>        doGet(request, response);<br>    }<br><br>    public String getUser(HttpServletRequest request, HttpServletResponse response) {<br>        return((String)request.getAttribute("UserName"));<br>    }<br>}<br>
+                    </pre>
+                    <!--  -->                      
+            <!--  -->
+            </div>
+            <!--  -->
+            
+        </div>
+    </body>
+</html>
