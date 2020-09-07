@@ -99,7 +99,7 @@ function gerar( ean_p ) {
 "<!-- id=\"categoria_do_produto_consultado\" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ --> " +
                                                                          "<tr>" +                                         
 "                                                                            <td " + "id=categoria_" + ean + " style=\"margin-top: 5px; background-color: #3A3A3A; color:#fff; font-family:  Arial, Helvetica, sans-serif; font-size: 120%; padding-left: 5px; float: left;\" >" +
-"                                                                                            " + cat + "fgfgfgf gfgfgfgfg" +
+"                                                                                            " + cat +
 "                                                                            </td>" +
 "                                                                        </tr>" +
                     
