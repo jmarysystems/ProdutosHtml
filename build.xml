@@ -7,8 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="Produto_por_ean" default="default" basedir=".">
-    <description>Builds, tests, and runs the project Produto_por_ean.</description>
+<project name="ProdutosHtml" default="default" basedir=".">
+    <description>Builds, tests, and runs the project ProdutosHtml.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
